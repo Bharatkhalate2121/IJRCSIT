@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Div in Bootstrap</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .sticky-div {
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 0;
+      background-color: white;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      z-index: 1000; /* Ensure it's above other elements */
+    }
+    .stick-to-top {
+      top: 0 !important;
+    }
+    .bottomhover a:hover{
+      border-bottom: 2px solid orange;
+    }
+  </style>
+</head>
+<body>
+    <div class="container" style="border: 2px solid black;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus modi earum dicta cupiditate odio illo, eum eius magnam delectus ipsam deserunt mollitia impedit veritatis possimus dolore voluptates nostrum atque ex.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eum molestiae dignissimos, eaque voluptas voluptatem quia ipsa ea dicta asperiores officia repellendus quaerat repudiandae est dolorum sapiente? Eligendi, nostrum quos.
+    </div>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="sticky-div" id="sidebar">
+              <h2>Sticky Sidebar</h2>
+              <p>This sidebar will stick to the top when you scroll.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+      <div class="col-md-8">
+        <h1>Main Content</h1>
+        <div class="bottomhover" style="border: 1px solid black;">
+            <h5><a href="#" style="text-decoration: none; color: black;">State-element-aware syndrome classification based on hypergraph convolutional network</a></h5>
+            <span>Shenghua Teng, Jishun Ma, Zuoyong Li, Chang'en Zhou, Weikai Lu</span><br>
+            <span>Article 123369</span>
+        </div>
+        
+      </div>
+
+<div class="col-md-8">
+        <h1>Main Content</h1>
+        <div class="bottomhover" style="border: 1px solid black;">
+            <h5><a href="#" style="text-decoration: none; color: black;">State-element-aware syndrome classification based on hypergraph convolutional network</a></h5>
+            <span>Shenghua Teng, Jishun Ma, Zuoyong Li, Chang'en Zhou, Weikai Lu</span><br>
+            <span>Article 123369</span>
+        </div>
+        
+      </div>
+
+<div class="col-md-8">
+        <h1>Main Content</h1>
+        <div class="bottomhover" style="border: 1px solid black;">
+            <h5><a href="#" style="text-decoration: none; color: black;">State-element-aware syndrome classification based on hypergraph convolutional network</a></h5>
+            <span>Shenghua Teng, Jishun Ma, Zuoyong Li, Chang'en Zhou, Weikai Lu</span><br>
+            <span>Article 123369</span>
+        </div>
+        
+      </div>
+     
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var lastScrollTop = 0;
+      $(window).scroll(function(event){
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop){
+          // downscroll code
+          $('#sidebar').removeClass('stick-to-top');
+        } else {
+          // upscroll code
+          $('#sidebar').addClass('stick-to-top');
+        }
+        lastScrollTop = st;
+      });
+    });
+  </script>
+</body>
+</html>

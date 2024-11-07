@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Publisher</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+
+ul {
+      list-style-type: none;
+      padding: 0;
+     
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+      
+    }
+     .navbar-text a:hover{
+      border-bottom: 2px solid orange;
+     
+     }
+     .col-md-8 h2 span:hover{
+      border-bottom: 2px solid white;
+      
+     }
+     .col-md-8 h5 span:hover{
+      border-bottom: 2px solid white;
+      
+     }
+
+     .nav-item:hover .dropdown-menu {
+      display: block;
+    }
+
+    
+    .dropdown-menu a span:hover{
+      border-bottom: 2px solid orange;
+      background-color: transparent;
+    }
+    .dropdown-menu a:hover{
+      background-color: transparent;
+    }
+    .bottomhover a:hover{
+      border-bottom: 2px solid orange;
+    }
+    .bottomhover1 a:hover{
+      border-bottom: 2px solid orange;
+      color: black;
+    }
+    .nav-item a span:hover{
+      border-bottom: 2px solid orange;
+    }
+
+    /*For Article css*/
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        border-bottom: 2px solid #000000;
+        position: relative;
+    }
+
+    .nav-tabs .nav-item.show .nav-link::before, .nav-tabs .nav-link.active::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #fe7323;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-tabs .nav-item.show .nav-link:hover::before, .nav-tabs .nav-link.active:hover::before {
+        transform: scaleX(1);
+    }
+
+    /*Button hover*/
+    .om {
+  background-color:#114E5E;
+  border: none;
+  color: black;
+  padding: 5px 5px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  /* transition: 0.3s; */
+  border: 2px solid #114E5E;;
+}
+
+.om:hover {
+  background-color: white;
+  color: white;
+  border: 2px solid orange;
+}
+
+.hover-bg-btn {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .hover-bg-btn:hover {
+      background-color: #0056b3;
+    }
+    </style>
+  </head>
+<body>
+    <!--This is head section-->
+    <header>
+        <center> <a href="#"><img src="sknscoeheader.jpg" width="50%" ></a></center>
+
+    <!--Nav 1-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <a class="navbar-brand me-auto mb-2 mb-lg-0" href="#" style="width: 15%;"><img src="sknscoeicon.jpg" width="25%">IJRCSIT.SKNSCOE Pandharpur</a>
+         
+
+         
+  
+          <span class="navbar-text">
+           
+            <a href="#" class="belowborder" style="text-decoration: none ;color: black;">Journals & Books</a>
+            
+          
+          </span>
+          <span class="navbar-text" style="margin-left: 1%;">
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+              
+            </form>
+            
+           </span>
+          <span>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"> <button class="btn bg-white " style="border-color: coral;" type="submit">Register</button></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"> <button class="btn btn-outline-info" type="submit">Sign in</button></a>
+              </li>
+              
+            </ul>
+  
+          </span>
+        </div>
+      </div>
+    </nav>
+
+        <!--This is Big heading container-->
+
+  
+
+   <div  class="container-fluid " style="background-color:#114E5E; height: 40%;">
+    <div class="container">
+     <div class="row">
+        <div class="col-md-8">
+          
+          <h2 style="color: white; margin-top: 5%;"><span>International Journal of Research in </span></h2>
+          <h5 style="color: white;margin-bottom: 5%;"><span>Computer Science and Information Technology</span></h5>
+        </div>
+        <div class="col-md-2">
+          <a href="#" style="text-decoration: none;color: white; text-align: right;"><h3 style="margin-top: 25%"><span>50</span><br> <span>citis</span></h3></a>
+     
+        </div>
+        <div class="col-md-2">
+          <a href="#" style="text-decoration: none;color: white; text-align: center;"><h3 style="margin-top: 25%"><span>50</span><br> <span>citis</span></h3></a>
+     
+        </div>
+     </div>
+    </div>
+   </div>
+
+
+   <!--This is nav2-->
+   <div class="row" style="color: black;">
+    <div class="col-md-5" style="color: black; border: 1px solid gray;">
+       <nav class="navbar navbar-expand-lg navbar-light bg-light">
+           <div class="container">
+             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: space-between; display: flex;">
+               <div>
+                   <li class="nav-item dropdown" style="color: black; list-style-type:none ; ">
+                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                         Article & Issue
+                       </a>
+                       
+                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                         <li><a class="dropdown-item" href="#"><span>Latest Issue</span></a></li><br>
+                         <li><a class="dropdown-item" href="#"><span>All Issues</span></a></li><br>
+                         <li><a class="dropdown-item" href="#"><span>Articles in press</span></a></li>
+                         <li><a class="dropdown-item" href="#"><span>Special issues and article collections</span></a></li>
+                         <li><a class="dropdown-item" href="#"><span>Linked datasets</span></a></li>
+                         <hr>
+                         <li><a class="dropdown-item" href="#"><span>Sign in to set up alerts</span></a></li><br>
+                         <li><a class="dropdown-item" href="#"><span>RSS</span></a></li>
+                       </ul>
+                       
+                     
+                     </li>
+               </div>
+               <div>
+                   <li class="nav-item dropdown" style="color: black; list-style-type:none ; ">
+                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                         About
+                       </a>
+                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#"> <span>Aims and scops</span></a></li>
+                      <li><a class="dropdown-item" href="#"> <span>Editorial board</span></a></li>
+                        <li><a class="dropdown-item" href="#"> <span>Journal insights</span></a></li>
+                          <li><a class="dropdown-item" href="#"> <span>Abstracting & indexing</span></a></li>
+                           <li><a class="dropdown-item" href="#"> <span>News</span></a></li>
+                            <li><a class="dropdown-item" href="#"> <span>Announcements</span></a></li>
+                               <li><a class="dropdown-item" href="#"> <span>Videos-Audioslides</span></a></li>
+                       </ul>
+                     </li>
+               </div>
+               <div>
+                   <li class="nav-item dropdown" style="color: black; list-style-type:none ; ">
+                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                         Publish
+                       </a>
+                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#"><span> your article</span></a></li>
+                        <li><a class="dropdown-item" href="#"><span>Guid for article</span></a></li>
+                        <li><a class="dropdown-item" href="#"><span>Open access options</span></a></li>
+                        <li><a class="dropdown-item" href="#"><span>Language Editing services</span></a></li>
+                       </ul>
+                     </li>
+               </div>
+               <div class="bottomhover">
+                   
+                       <a  href="#"  role="button"  style="color: black;text-decoration: none;"> Order Journals</a>
+                     
+               </div>
+
+             </div>
+           </div>
+         </nav>
+    </div>
+    <div class="col-md-3" style="border: 1px solid gray;">
+       <span class="navbar-text">
+           <form class="d-flex" style="margin-top: 10px;">
+             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+             <button class="btn btn-outline-success" type="submit">Search</button>
+           </form>
+         </span>
+    </div>
+    <div class="col-md-2" style="border: 1px solid gray;">
+       <h6 style="text-align: center; margin-top: 15px;" class="bottomhover"> <a  href="#"  role="button"  style="color: black;text-decoration: none;"> Submit your article</a></h6>
+
+    </div>
+    <div class="col-md-2" style="border: 1px solid gray;">
+       <h6 style="text-align: center;margin-top: 15px;" class="bottomhover"> <a  href="#"  role="button"  style="color: black;text-decoration: none;">Guide for authors</a></h6>
+
+    </div>
+</div>
+       
+    </header>
+
+  
+
+    <!--This is main Section-->
+    <main>
+         <!--About the journal-->
+
+         <div class="container mt-4 " style="background-color: rgb(221, 221, 221); height: 40%;"   >
+             <h5 style="margin-left: 7%; padding-top: 40px;">About the journal</h5>
+             <p style="margin-left: 7%;">Expert Systems With Applications is a refereed international journal whose focus is on exchanging information relating to <strong>expert</strong> and <strong>intelligent</strong> systems applied in <strong>industry</strong>, <strong>government</strong>, and <strong>universities</strong> worldwide. The thrust of the journal is to publish <strong>original</strong> papers dealing with the design, …</p>
+            <p class="bottomhover" style="padding-bottom: 40px;"> <a  style="text-decoration: none;margin-left: 7%; " href="#">View full aims & scope</a></p>
+            </div>
+
+
+
+            <!--charges section-->
+
+            <div class="container" style="margin-top: 5%;">
+                <div class="row">
+                  <div class="col-md-3" style="border-left: 2px solid black;">
+                     <h2>$3320</h2>
+                     <span>Article publishing charge</span><br>
+                     <span>for open access</span>
+                  </div>
+                  <div class="col-md-3" style="border-left: 2px solid black;">
+                    <h2 style="margin-top: 2%;">241 days</h2>
+                    <span>Submission to acceptance</span>
+                    
+                 </div>
+                 <div class="col-md-3" style="border-left: 2px solid black;">
+                  <h2 style="margin-top: 2%;">7 days</h2>
+                  <span>Acceptance to publication</span>
+                 
+               </div>
+               <div class="col-md-3" style="border-left: 2px solid black;">
+                <div class="container" style="margin-top: 11%; " >
+                  <div  class="bottomhover">
+                  <button class="om" style="margin-right: 1%;" ><img src="arrow.png" width="50%" ></button><a href="Journal_Insights.html"  style="text-decoration: none;color: black;">Read latest issue</a>
+                  </div>
+                  </div>
+             </div>
+
+                </div>
+            </div>
+
+            <!--About editor in chief-->
+
+            <div class="container-fluid" style="background-color:#114E5E; height: 50%; margin-top: 50px;">
+               <p  style="color: white; margin-left: 6%;padding-top: 30px;" ><strong  style="font-size: 25px;margin-right: 1%;">Editor-in-Chief</strong> |<a href="#"  style="text-decoration: none; color: white;margin-left: 1%; border-bottom: 2px solid white;">View full editorial board</a></p>
+             
+              <div class="row">
+                <div class="col-md-3" style="text-align: right; padding-bottom: 4%;" >
+                 <img src="svpingle.png"  class="rounded-circle" alt="Dr. S.V.Pingle" width="50%"> 
+                </div>
+                <div class="col-md-9" style="color: white;padding-top: 3%;">
+                
+                 <div>
+                  <h5>Pro. Dr. S.V.Pingle</h5>
+                 </div>
+                 <div>
+                  <h6>Louisiana State University in Shreveport, Shreveport, Louisiana, United States of America</h6>
+                 </div>
+                </div>
+              </div>
+              
+            </div>
+
+
+
+            <!--About Article Section-->
+
+            <div class="container">
+                
+    <section class="article-zone" id="article-zone" data-aa-region="aa-article-zone">
+      <div class="container-fluid mt-3">
+          <div class="row">
+              <div class="col-12">
+                  <div class="u-margin-l-ver">
+                      <div class="section-heading-wrapper u-margin-l-ver">
+                          <h2 class="section-heading u-h3 js-article-zone-heading"
+                              style="--border-color: #055777;">Articles</h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col-12">
+                  <ul class="nav nav-tabs">
+                      <li class="nav-item">
+                          <a class="nav-link active" href="#latest-articles" data-toggle="tab">Latest published</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#articles-in-press" data-toggle="tab">Articles in press</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#top-cited-articles" data-toggle="tab"><span> cited</span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#most-downloaded-articles" data-toggle="tab">Most downloaded</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#most-popular-articles" data-toggle="tab">Most popular</a>
+                      </li>
+                  </ul>
+                  
+
+                  <div class="tab-content">
+                      <div class="tab-pane active" id="latest-articles">
+                         
+                         om phule Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium totam qui dolores vel illo esse alias ipsa necessitatibus dicta porro. Iusto eos amet nostrum reprehenderit iste sapiente adipisci in distinctio, ad voluptatibus ipsum ab laborum dolores nam laudantium esse architecto quo saepe. Fugiat sed laudantium vero obcaecati reiciendis voluptatem voluptas praesentium quidem. Vel error laborum molestiae provident adipisci aut nulla. Saepe deleniti eveniet ipsam in maxime unde enim aperiam quod natus veniam praesentium culpa, placeat neque rem. Molestiae modi distinctio enim totam a impedit, illo perferendis sed soluta, nihil eligendi eius fuga sit quisquam blanditiis nisi fugit saepe asperiores magni in praesentium! Ab perspiciatis explicabo deleniti, commodi laborum reiciendis omnis? Esse quis omnis totam a ipsam, eligendi aspernatur explicabo reiciendis iste, molestias perferendis sint? Accusamus exercitationem laboriosam laudantium id odio? Assumenda ullam laudantium ipsum aliquid molestias esse facilis ratione, qui nam, porro, architecto tempore odio fugit! Explicabo natus commodi, error impedit in laudantium facere ad! Molestiae nam atque a veritatis, saepe amet laboriosam debitis. In maxime rem ad explicabo, dicta perspiciatis tempore voluptatibus architecto culpa! Laudantium aliquid corrupti, quod officiis, nemo molestias natus nisi alias illum, a soluta eaque cumque sit in eligendi. Reprehenderit error dicta, reiciendis odio explicabo commodi delectus eius molestiae temporibus consequuntur et quod totam molestias doloremque non voluptatem itaque aut necessitatibus! Quidem, quas itaque. Consequuntur tenetur alias quia facere doloribus, tempore quos labore aliquam. Quidem excepturi odio porro consequatur quasi temporibus et voluptas, architecto eaque pariatur quod ipsa ipsam autem expedita asperiores maiores laboriosam perspiciatis doloremque enim incidunt? Sed molestias dolorem similique labore nemo accusantium laudantium impedit deleniti at, voluptatem quo enim, dolorum expedita distinctio animi tenetur commodi itaque illum ipsam doloremque. Temporibus repellat esse, accusantium voluptatum soluta consequuntur possimus numquam, fugit sequi exercitationem doloribus incidunt dolores nobis? Odit fuga harum rerum veniam ipsa ex repellat enim libero ad, totam dolorem dignissimos numquam itaque vel facilis quaerat, inventore excepturi ab culpa quisquam porro. Fugit tenetur voluptas accusantium aliquam qui vel laudantium omnis. Quo consequuntur optio sit quis tempore blanditiis. Pariatur velit quis enim doloribus voluptatem sed expedita eius odit et optio hic unde tempora sapiente harum est rerum dicta, error magnam totam laborum inventore. Ipsam hic iste modi vel neque earum nisi iusto deserunt voluptates dignissimos illum rerum esse quisquam eveniet impedit odit inventore, maiores fugit quia molestiae, architecto odio minus! Nesciunt officia dolores molestias aspernatur quis cumque totam, neque culpa earum, perspiciatis magnam eos eius omnis quos aliquid vero magni ducimus sint animi voluptas. Nulla rerum natus non, consectetur esse nostrum? Cumque aliquam, repellendus quasi voluptatem suscipit nesciunt blanditiis aperiam quae ea odio at animi libero ad! Magni minus repudiandae harum veritatis in natus distinctio rem minima, commodi aliquid fuga doloribus animi praesentium autem. A est obcaecati ullam deleniti possimus, accusantium dolore, commodi suscipit animi sint incidunt iure enim fugiat esse vel atque porro recusandae aliquid maiores veritatis, modi quaerat cumque consectetur! Culpa accusamus dolores hic minima. Excepturi recusandae ex quod ea quo nihil dicta, quidem esse vel nisi praesentium, consequuntur unde quam pariatur est laborum. Similique minus incidunt eligendi magnam a fugiat alias dolor! Numquam amet facilis commodi ab nulla eum, suscipit ut. Quae architecto suscipit quisquam sit iure beatae aperiam nesciunt optio voluptas quod cupiditate quia, inventore sapiente adipisci nemo culpa dolorum, maiores doloremque deserunt. Vitae dolore deleniti soluta laboriosam sed sint voluptas praesentium vero quaerat, officiis voluptatibus omnis fugit exercitationem quidem. Laudantium facere iste, magni dolor libero illum corrupti quos sequi veniam nisi qui obcaecati. Ipsam id ex nostrum quasi magnam maiores ad laborum doloribus, placeat provident? Facere, minus. Quia quos deserunt dolore. Dolore aspernatur voluptatibus animi laborum odit tempore similique harum, perferendis ipsam, rerum at, placeat pariatur iste quibusdam. Architecto soluta molestiae necessitatibus eum vero quidem odit animi reprehenderit voluptatem numquam deserunt, praesentium alias voluptatibus est, facere laborum tempora? Et quaerat labore molestias consequuntur, in praesentium, ea itaque ab optio eaque facilis rerum minima sunt quia! Aliquid nobis quasi blanditiis cum itaque dolore qui debitis iste. Tenetur iure nihil facere odio explicabo fugit sunt nulla ipsam et hic dolorem obcaecati maxime commodi, consequatur at ratione officia in magnam omnis nemo laudantium corporis eaque voluptatibus. Quo libero, vel consequuntur rem consequatur eaque minima et reprehenderit magni quisquam deleniti, nesciunt animi soluta? Accusantium non repellat ea illum adipisci dolorum omnis quo eius, neque, vero minima ducimus quisquam. Minus enim qui, et cum ipsam nemo numquam? Reiciendis obcaecati dolorem, quas laudantium similique vel neque corporis, veniam, molestiae error fugiat numquam! Quos mollitia eos beatae. Eos praesentium dolor quo, corporis possimus architecto alias accusamus. Veniam sit obcaecati officia, maiores nobis corporis, rerum quisquam eos, laudantium quos suscipit odio adipisci? Minus doloribus unde enim commodi maxime corrupti aspernatur similique sint dolorum molestiae, repellendus tempore quae vitae deserunt pariatur distinctio, mollitia harum autem laborum voluptatum expedita eveniet consequatur voluptas non. Eum, nobis voluptatum? Eos tempora facere dolores, est eius quidem soluta aliquam, vitae praesentium expedita cupiditate reiciendis perferendis modi enim nostrum natus nesciunt, officia nobis recusandae. Minima doloremque possimus ea fuga quae ducimus similique perspiciatis, suscipit ipsum sed, vero eaque alias? Quidem inventore dolorum sunt minima, eaque nihil obcaecati minus provident voluptatem quod voluptatibus veniam aperiam maxime quia in nesciunt esse, molestias voluptatum ullam labore beatae! Quod, facilis autem quidem officia laborum laboriosam tenetur a ab quae, reprehenderit fugiat ex velit asperiores facere! Accusantium, aut qui sint culpa eum alias id aperiam consequuntur ullam, repellendus enim, quod laboriosam similique voluptatem pariatur fuga odit maiores dolorum esse corrupti aliquam! Iste et, obcaecati eos dignissimos, odit voluptatum nisi nam possimus mollitia asperiores accusamus amet inventore ducimus quam iusto labore, facere eveniet quo alias natus debitis corporis ad cumque! Sit ipsum dignissimos reiciendis hic sunt delectus non debitis eveniet sequi repudiandae, perferendis nulla rem consequuntur odio voluptatem autem deserunt ut fuga sapiente, sint illo quia doloremque repellendus eaque! Exercitationem officiis harum, id alias voluptatem temporibus voluptates dignissimos ipsum reprehenderit adipisci, cupiditate ipsam aut nisi reiciendis, assumenda esse. Nisi aut natus, asperiores officia mollitia nostrum consequuntur similique? Iusto cupiditate deserunt explicabo at maxime sequi, laudantium, doloribus odio dolorum veniam fuga aspernatur?
+
+                      </div>
+                      <div class="tab-pane" id="articles-in-press">
+                           pranav adsule Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore voluptates similique placeat doloremque temporibus quasi, unde nisi cupiditate, ad aut neque nostrum rerum necessitatibus fugit impedit quod veritatis reiciendis, esse sunt nam eveniet minus laboriosam qui? Illo, inventore exercitationem minima doloremque possimus nam totam ipsa. Ipsam omnis nesciunt blanditiis sunt quae neque optio quaerat, quia tenetur dolorem animi corporis ea, perferendis iure voluptatem? Minus accusantium, id voluptates nam ullam eius debitis sequi quam sed nisi deleniti amet beatae quia aliquid tempore, dignissimos, illum rerum odit expedita illo? Magni perspiciatis nihil ullam explicabo tenetur doloribus eum obcaecati, rem doloremque fuga. Eius, quidem velit in mollitia ipsam maxime a facilis? Voluptas libero consequatur quam excepturi vero. Eum laboriosam aliquid obcaecati quidem sunt in nam mollitia. Similique suscipit asperiores delectus aperiam, et iste, adipisci velit, placeat libero debitis eos laborum! Quisquam ipsum quidem, nobis blanditiis cupiditate facilis. Delectus placeat corporis totam quos doloribus perspiciatis possimus voluptatibus voluptates error laudantium esse veniam velit asperiores pariatur perferendis accusamus, unde debitis. Quos obcaecati, quis excepturi id aut soluta temporibus fugiat vero sapiente officia nisi culpa nam aperiam quod nesciunt fuga assumenda! Assumenda, similique dignissimos maiores ullam provident ipsum iure maxime temporibus cum nam id sapiente impedit libero dolorem nostrum voluptatibus qui aliquam minima eaque. Voluptatibus culpa autem voluptatum, voluptate aliquid incidunt mollitia quas, quaerat quod, vero repellendus. Et recusandae laudantium quibusdam harum laborum. Autem mollitia magni nostrum. Sunt optio atque, aliquid ratione eligendi vero nulla labore voluptatum veritatis, soluta quaerat id facilis vel eaque sapiente rem at error incidunt! Incidunt laborum minus molestiae? Quia perferendis voluptatibus necessitatibus cumque maxime ex fugiat suscipit, similique dolor deserunt exercitationem magnam fuga, rem eligendi sequi earum neque amet, officia dolorum alias itaque saepe consectetur! Quasi, quis perspiciatis, aliquam laborum pariatur temporibus ut rem labore excepturi obcaecati iure esse natus ducimus repellat voluptatem! Accusamus reprehenderit sint alias, aliquam sit tenetur excepturi aut ratione eveniet sapiente ipsum aperiam illo numquam deleniti. Iure, fugit qui provident ducimus, corporis quisquam aliquam iste, voluptate quas rerum a quam unde sit impedit magni sint? Odit eos est mollitia. Libero sunt eius voluptatum labore sequi veritatis blanditiis doloremque sit quo est tenetur reiciendis rerum aperiam modi suscipit, dolorem quam consectetur inventore sapiente magni reprehenderit necessitatibus placeat vel. Vitae odio suscipit sint ab eos exercitationem fugit labore veritatis necessitatibus obcaecati temporibus, neque reprehenderit veniam dignissimos natus impedit facere aliquid illum harum eaque quo saepe? Libero, sequi nesciunt? Laboriosam error ducimus obcaecati neque illum incidunt, doloremque voluptatibus tenetur. Dignissimos ipsam impedit voluptatibus qui explicabo voluptatem voluptas delectus? Quas deleniti eum atque nemo soluta id iusto error natus reprehenderit totam fuga repudiandae iure aut ab sequi qui aperiam tempora a impedit, reiciendis in cumque vitae. Dolores aliquam porro veniam rerum possimus quia odit facilis natus! Quia vel vero earum laboriosam in eveniet reiciendis nostrum ipsa, iusto, placeat, ex blanditiis repudiandae excepturi voluptas qui doloremque quibusdam alias est culpa nesciunt? Praesentium sit aperiam ipsum sequi possimus, quisquam, cupiditate consequatur ex tempore nulla asperiores beatae minus quia ab quidem. Accusantium ipsam consequuntur quisquam fuga id natus illum officiis mollitia facilis eaque aliquam iste, pariatur labore quod corporis vero amet sunt ipsum praesentium odio libero. Voluptas veritatis mollitia voluptatem est, dolore commodi a minus autem distinctio provident velit reprehenderit odio delectus fuga voluptatibus dolor modi perferendis ea laudantium nam adipisci ex! Quod, voluptas reiciendis? Laudantium odit ipsum veniam eos doloribus! Quam minima aliquid veritatis debitis id facilis perferendis iste, nam dolor, dolorem saepe neque iusto ratione voluptatibus harum pariatur ullam obcaecati voluptas mollitia temporibus dolores. Incidunt ipsa sit consectetur officiis eligendi illo omnis aliquid labore quia a ad at facere tempore, ullam quidem ex corrupti fuga amet. Consequuntur laborum corporis commodi accusamus nulla minus id iusto. Eos doloribus, vel saepe repudiandae placeat optio dolor magnam tempora ad odio nobis delectus laborum architecto molestiae? Labore ducimus nulla quam accusamus ex ipsum quod facilis et est tempora necessitatibus vel, eos, corporis odit unde dolor quos pariatur? Vel laudantium, quae maxime ipsam officiis quo, nobis soluta omnis consectetur illo, unde ducimus incidunt aliquam. Illum ea sunt maiores voluptatum laborum numquam eligendi perspiciatis rerum esse? Maxime eius consequuntur deleniti qui autem provident commodi accusamus unde obcaecati repudiandae similique tenetur pariatur tempora deserunt recusandae assumenda, reprehenderit aliquid fugit. Cupiditate unde adipisci esse. Cum eum ut consectetur voluptatum quod enim nam nostrum iusto quas delectus? Expedita laudantium, minus explicabo sint reprehenderit accusantium molestias quibusdam saepe tenetur praesentium vitae distinctio doloribus corporis eligendi repudiandae voluptatum deserunt repellat? Provident, cum! Quam laudantium quia id a sit rem reiciendis voluptatum eveniet vero repudiandae? Velit voluptate assumenda veniam tempore modi eos corrupti maxime hic cumque ea sequi at, accusamus, nisi quis laudantium voluptatibus. Vitae repellat blanditiis asperiores eaque eveniet reiciendis labore vel, repellendus, voluptatibus sint, optio dignissimos. Molestiae, repellat consectetur, veritatis provident dignissimos excepturi molestias, error distinctio voluptates aut soluta praesentium nihil laudantium iste nisi voluptatem ad. Maiores ad natus labore, perspiciatis fugiat mollitia id, minus, quidem cum saepe repudiandae ex tempora officia. Veritatis illo quam alias nam natus explicabo reprehenderit obcaecati beatae sint ea consectetur dolor quibusdam aliquam sapiente voluptatem quaerat, commodi, neque qui hic, animi expedita quod! Illo dolores aliquam consequuntur enim, beatae sed cum necessitatibus dicta officia quaerat sequi explicabo excepturi reiciendis unde impedit ducimus asperiores odio quo cupiditate omnis sunt totam? Cupiditate molestias necessitatibus temporibus numquam ad id quod explicabo aut obcaecati quibusdam. Soluta temporibus doloribus nihil perspiciatis accusantium veritatis maiores quibusdam dolor quam enim voluptate sed nam, minima id ducimus? Dignissimos aliquam perspiciatis facilis commodi ipsum, consequatur eius natus velit atque omnis nemo magni minus possimus officia quas totam recusandae reprehenderit temporibus ullam repudiandae distinctio facere et dolorum. Alias possimus magnam dolores veritatis fuga quidem. Saepe, eum sunt nam delectus ad numquam maxime fuga et, deleniti provident aliquam rerum quod rem dolore aut explicabo nesciunt exercitationem sint voluptatem! A omnis velit laborum, vero reiciendis illum architecto saepe! Accusantium in, dolore nesciunt voluptas eveniet eaque eos unde ipsum harum inventore omnis sint, possimus voluptate aspernatur quod. Necessitatibus consectetur quisquam ipsa ut praesentium doloribus culpa veritatis. Aliquam quae ab numquam.
+
+                          
+                      </div>
+                      <div class="tab-pane" id="top-cited-articles">
+                          <!-- Existing content goes here -->
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ducimus quas iusto at dolore dolorum accusamus totam mollitia. Voluptas nostrum ad dolor eveniet nisi ducimus optio? Repellendus delectus ab quisquam et sit, expedita vitae a voluptas. Vitae reprehenderit quas hic voluptatem culpa laudantium deserunt veniam ex porro officiis modi, eaque unde sit at voluptatibus autem facere provident ea. Eos dolor, dignissimos quo quia quis exercitationem ipsam incidunt est impedit ab, ducimus eaque et necessitatibus earum quibusdam, beatae omnis corrupti illum veniam tenetur obcaecati. Aut libero quibusdam consequuntur hic sint beatae natus ea commodi, dolor cum ad iure nulla impedit temporibus molestiae. Quibusdam dicta debitis accusantium qui. Et quos illo maiores nulla, perferendis aliquam impedit, suscipit ut nisi ex nam. Odio ex vitae illum, necessitatibus dicta blanditiis optio dolor dignissimos quae id nihil laboriosam cupiditate corrupti alias similique. Reprehenderit odio dicta iste ratione expedita deserunt amet natus laboriosam a perspiciatis, recusandae quasi error exercitationem, ab cumque dignissimos. Iste ipsum rerum dolore architecto similique perspiciatis quis molestias modi, debitis voluptatum velit qui nostrum aliquid pariatur quia consectetur facere natus doloremque fugiat? Porro iusto facere nemo magnam reprehenderit expedita blanditiis aliquam ullam. Odio quisquam amet velit quaerat itaque iusto dolores et. Excepturi distinctio non eligendi! Quam vitae velit assumenda reprehenderit sint animi aut omnis ea accusantium beatae quae saepe, officiis repudiandae hic eaque deleniti tempora at, iste dolorem magnam! Impedit sunt atque quibusdam neque velit explicabo nesciunt quod sapiente, ex harum perspiciatis, deserunt, aspernatur labore repudiandae rem. Laudantium esse qui dolore impedit fugiat nulla obcaecati porro, id voluptatum, magni officiis commodi ad tenetur repellat, possimus quaerat expedita cupiditate distinctio reprehenderit adipisci molestias suscipit eum laborum! Qui error impedit reprehenderit saepe fugit voluptate sit dolore. Ipsam temporibus omnis aspernatur voluptatum! Animi aut dolores, cupiditate cumque blanditiis minus aperiam? Laudantium odio enim, ullam tenetur veniam eius nesciunt aut libero, molestiae distinctio ipsam dolorem sapiente eveniet reprehenderit dignissimos unde praesentium molestias repudiandae maxime ea fugit? Et recusandae fugit amet sunt molestiae asperiores obcaecati minima consequatur doloremque, animi at a? Rem recusandae commodi alias quibusdam quos assumenda illo aut! Et perspiciatis nisi quia tempore at vel numquam ratione laboriosam in iure distinctio iste facilis non nulla, veniam ipsa reprehenderit similique cupiditate deleniti dolores neque. Maiores sed deserunt pariatur alias, aliquid aperiam atque! Libero corrupti at totam maxime et officiis ad repellendus, earum veniam, labore esse minima quia. Quam, odit. Sit neque nisi illum similique earum non repellat aut consectetur, ipsa veritatis nemo accusantium dignissimos esse cupiditate deserunt natus recusandae accusamus eos sint reprehenderit id iure. Odio eos non ad commodi impedit placeat. Deserunt, officiis. Distinctio, itaque odio maiores aut minima architecto, modi nisi nobis sint, non suscipit eligendi dignissimos deserunt ex tempore minus libero labore sapiente dolor quas. Incidunt, quia nostrum perspiciatis delectus maxime aut inventore aliquam cupiditate architecto quod esse voluptas cumque, a odio sit magni cum reiciendis quasi sapiente nisi ipsum odit. Earum dolorum ad, facilis fugiat sequi eligendi saepe repellendus itaque veniam minima culpa hic? Beatae nemo minus veritatis praesentium ipsa veniam rem, sit provident labore qui, maxime doloribus, consectetur quam a. Reiciendis cum similique illum eius doloremque ratione rerum rem officiis in beatae? Porro, voluptatum ratione! Illo, expedita rem! Dolorum ipsum officia praesentium placeat est? Veniam, blanditiis nam tempore eum, pariatur, error perferendis ipsam repellendus quo quisquam quasi et facilis earum nisi expedita rerum hic quaerat quibusdam eligendi in ducimus. Molestiae, illo. Est, iusto voluptatibus id hic perferendis tempore quod cumque mollitia necessitatibus nam neque quisquam laborum, fuga, delectus minima consequuntur at exercitationem natus aperiam. Eius fugit iusto, delectus, laboriosam voluptas voluptate id, sequi quidem ipsa quisquam quae odio. Cumque, voluptatum veritatis alias totam placeat blanditiis neque saepe aperiam labore soluta error excepturi iste aspernatur amet illum quo atque, iusto recusandae repudiandae sed. Consequuntur aliquam vitae accusantium perferendis quis cupiditate rerum soluta aspernatur recusandae at, cumque sapiente pariatur exercitationem nihil sint dignissimos! Voluptatum, cumque recusandae illum voluptatem iure ut? Dicta repudiandae sapiente impedit, cumque consectetur nam sequi in reiciendis. Rerum quae adipisci totam enim tempora repellendus, doloribus eveniet ipsam temporibus laboriosam eius dolor officiis, saepe suscipit expedita qui minima numquam consequatur corrupti! Assumenda sed aperiam incidunt asperiores impedit laboriosam sapiente esse, temporibus repudiandae vitae enim iure eos quas, est iusto. Expedita sit et nulla deleniti autem iure nihil tempora explicabo suscipit praesentium eum, dolore dicta libero fuga corrupti consequatur voluptate a minima provident assumenda. In cum adipisci aspernatur impedit voluptas totam vel id illo. Voluptas velit cum quia. Cum eos enim, commodi sed quos mollitia, deleniti fugit, voluptatibus architecto fuga atque ratione. Quis neque odio error illum enim voluptates quaerat veritatis eveniet temporibus quas! Praesentium, soluta. Consectetur doloremque, quaerat possimus, sint quis nisi iste quasi ex fugiat quae unde illo ullam nemo sunt cupiditate, vero ab? Aut aliquid quod excepturi eaque libero ipsam explicabo cum doloremque iste aspernatur esse, consequuntur dicta facere modi repudiandae optio doloribus ea totam deleniti ipsa sapiente quibusdam tempora quisquam! Veritatis nulla, voluptatibus consequatur itaque dolorum at adipisci suscipit cupiditate voluptatem obcaecati ducimus, quis corporis, similique maiores odit accusantium non porro quibusdam reprehenderit. Adipisci, nisi non pariatur vel amet suscipit corporis repudiandae soluta aspernatur harum obcaecati maxime sed, voluptas veritatis officia unde debitis similique nam doloremque? Aliquam vero nostrum placeat tempora itaque eaque suscipit! Est modi fuga dolore necessitatibus ea cumque doloribus et quod dignissimos, dolorem quam obcaecati molestiae, quidem, libero corporis maiores perspiciatis omnis porro id minima illum. Illum hic ipsum aspernatur sunt autem suscipit, a dignissimos tempora laborum quae soluta libero magnam perferendis in quaerat itaque ipsa natus laudantium! Expedita voluptatibus vero impedit natus! Aspernatur ipsam, architecto corporis eaque totam debitis laborum at velit error. Ducimus aspernatur aliquid molestias eius a optio saepe ab animi quibusdam aut nemo eaque harum, quos amet accusantium magni autem sint, incidunt nulla error laborum unde. Officia dolores id eligendi quae minima, facere minus reprehenderit fuga rerum, doloribus hic officiis ducimus mollitia excepturi suscipit nihil nobis sit eveniet ab iusto modi eum. Natus, perspiciatis hic tempora quo nulla velit itaque sapiente corporis voluptate ipsam eos asperiores sed enim iusto pariatur necessitatibus ipsum!
+                      </div>
+                      <div class="tab-pane" id="most-downloaded-articles">
+                         
+                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati ex ad voluptas dicta corrupti maxime, nobis id. Doloribus accusamus nemo eaque, rerum asperiores dolorem impedit saepe ullam libero tempore, aliquam, dignissimos velit quas ex cum ducimus ab pariatur laboriosam consectetur. Veritatis, quisquam esse quo impedit alias ipsum obcaecati eaque qui recusandae dolores perspiciatis aspernatur numquam assumenda tenetur itaque fugit distinctio soluta! Et ea nesciunt consequuntur tenetur minus fugit amet in distinctio odit repellendus veritatis voluptates, ad aperiam dignissimos pariatur nisi error tempore impedit quas alias ipsa modi exercitationem doloribus architecto? Fugiat enim dolore iste laboriosam minus earum magni tenetur quibusdam saepe architecto optio nihil eum voluptatibus voluptatum ut quaerat aut veritatis, nobis sint odio eos nulla. Unde, ex. Libero dignissimos sapiente, expedita ea deserunt illum repellendus doloribus enim totam obcaecati sequi, illo nisi incidunt? Corporis eos quae expedita molestias autem repellat ipsum consectetur voluptatum dignissimos modi id reiciendis aliquam esse fugit rerum recusandae sapiente beatae, eligendi itaque veritatis blanditiis, earum eum accusamus provident. At doloribus, quam voluptas saepe error a labore sapiente repellendus beatae officia necessitatibus nemo fugiat blanditiis eligendi non. Porro temporibus quibusdam enim voluptatem asperiores maiores dolorum recusandae, dicta a et exercitationem, veniam sapiente cupiditate, quia ea praesentium. Architecto aut odit ea excepturi voluptate neque maiores modi fugiat nesciunt sed, aperiam ratione error nobis nostrum optio ullam quod id doloremque beatae officia placeat laborum possimus. Vitae quibusdam ut ipsam? Iure, ipsa fugiat? Reiciendis ipsum repudiandae totam neque consectetur reprehenderit quidem ad aliquam temporibus, amet dolores blanditiis, id dolorum, atque corrupti quam. Odio quibusdam distinctio, rerum in ut doloribus. Odio quod dolorem dolores quae iste dignissimos hic perferendis eius accusamus aspernatur voluptatem dolore nobis consectetur est harum fugiat, iure unde? Dolorem, aperiam. Unde quae deserunt vel dolores iusto magni laboriosam provident aut placeat dolorum, assumenda laudantium autem reiciendis eum exercitationem! Odio dignissimos vel ad ratione minima obcaecati, voluptas praesentium dolore harum, voluptate enim quaerat quod eaque sequi. At vitae, fuga architecto similique nisi corrupti rem qui inventore consequatur quae ab voluptatum nulla maxime maiores! Debitis pariatur neque asperiores? Mollitia maxime nisi natus, nostrum, molestias consectetur beatae, dolorem consequatur aliquam aliquid commodi error velit quos ratione explicabo ipsam? Consectetur laudantium nulla voluptatem, nisi eveniet eligendi. Voluptatum quam aliquid esse totam cumque debitis, eligendi, exercitationem saepe aperiam dicta alias sint aut architecto, obcaecati quisquam soluta odio natus aspernatur? Neque, quis facilis repellat delectus earum similique est rerum odit explicabo veniam molestiae corporis sint aperiam corrupti ut sunt tempora? Cupiditate deserunt autem repellat dicta perspiciatis nemo quis reprehenderit quae voluptatem voluptatibus quibusdam animi et quas deleniti aperiam tenetur, voluptates quo doloribus voluptas maiores minima accusantium amet! Laboriosam ad maxime quibusdam officia, iste dolor molestias. Repellendus quibusdam delectus, iusto temporibus consequuntur similique facilis nam accusamus exercitationem commodi id totam, vero cupiditate, obcaecati voluptate. Eum, nihil culpa! Officia commodi nisi, a quis cum necessitatibus. Rem adipisci deleniti possimus explicabo maiores assumenda quae repellat maxime illum dolorem! Natus tempore cumque est nam aut! Minima laboriosam sunt commodi deleniti tenetur eum quisquam suscipit ex necessitatibus. Est animi molestias aspernatur doloribus inventore assumenda, ipsam, dolor similique distinctio tempore quae nihil impedit iste eos dignissimos voluptatibus voluptatum alias quo vero. Quia eveniet cumque vero ea minus? Quaerat atque rem quia excepturi vel. Saepe libero, enim non soluta sunt ad placeat atque ut ducimus beatae alias nisi id commodi porro aliquid? Facere, fugiat, at iure et minus animi eligendi non possimus ducimus dignissimos amet culpa iste, quia quos voluptate laborum consectetur assumenda aut voluptas voluptatem. Eveniet quis accusamus quo autem odit quia eos ullam quasi veniam obcaecati, qui unde deserunt cumque eius dicta quas ab maiores. Aspernatur, labore! Accusamus error dignissimos dolore quasi assumenda nisi, optio exercitationem fugit laborum deleniti vitae quia eos ipsum praesentium quos laudantium, voluptatum ex ipsam sapiente iusto neque, repellendus aliquam debitis at? Quos maxime sint iste totam voluptatum quo excepturi optio quis, dolore in quam molestiae, tenetur quasi nisi odio a eaque nam culpa deleniti error? Voluptatum esse repellat aperiam atque vel recusandae modi iure possimus. Rem fugiat quam corrupti dolorem, dignissimos iusto dolore, totam exercitationem sapiente veniam, architecto qui deserunt quaerat. Qui repellat vero repudiandae ducimus sit? Ratione doloremque illum distinctio cum pariatur similique nam explicabo, blanditiis eum quasi deserunt eaque mollitia ex possimus nisi tenetur modi. Placeat illum omnis facere incidunt, itaque ullam, at aliquid id fugiat nisi accusamus harum voluptatum quisquam amet. Velit architecto, in quod ex hic tenetur minus! Cum illum reprehenderit distinctio cupiditate ducimus? Harum eveniet quisquam minima culpa. Quo ex doloremque eveniet tenetur quisquam delectus dicta non aliquid praesentium, minima et facilis, illo, ducimus quidem itaque corrupti sunt velit dolorum repellat ipsum! Ratione, amet officiis. Magni voluptatem tempore fugiat. Aliquam a nulla architecto impedit laudantium adipisci. Dignissimos consequuntur, facere unde aperiam asperiores perspiciatis expedita. Nostrum cumque odit voluptas repudiandae ea dolorum reiciendis a aut id, velit, provident fugit pariatur ad molestias sapiente asperiores minima fugiat quibusdam optio aspernatur! Fugiat tenetur autem natus vero architecto aspernatur, nulla suscipit fugit eligendi obcaecati cupiditate qui, adipisci reprehenderit dolores pariatur error voluptas saepe dolorem? Quidem temporibus corporis et odit, cum laboriosam explicabo aut consequuntur perferendis porro rerum ratione nulla nostrum necessitatibus ipsam, odio non impedit? Quis odit illum ipsum voluptates at optio enim necessitatibus quod accusamus eveniet. Accusamus, nostrum voluptatum voluptatibus dolorum reiciendis asperiores. Dolor quo, hic pariatur consectetur praesentium voluptatibus dolorem odio in qui veritatis laboriosam deserunt possimus quae voluptatum sapiente officia omnis quidem. Amet similique laborum doloremque blanditiis explicabo voluptatibus, temporibus voluptas obcaecati, eveniet distinctio quos dolorem sed fugit modi libero. Praesentium possimus ipsum soluta, reiciendis laborum maxime impedit assumenda quas provident sapiente obcaecati deleniti quia dicta commodi voluptatem consequuntur placeat asperiores modi! Numquam vero est, quasi asperiores fugit velit tempore in nihil itaque nemo minima quia qui ea deleniti sed eveniet dolore et provident quidem? Neque doloribus dolores, eius aspernatur a sit sapiente! Eligendi numquam quo aliquam pariatur impedit, possimus natus consectetur rem exercitationem corrupti nesciunt similique inventore ipsum. Consequatur laudantium suscipit quo voluptatem tempore vel eaque dolorum adipisci qui earum illo delectus, deserunt, ea sit! Reprehenderit, cum ex?
+
+                      </div>
+                      <div class="tab-pane" id="most-popular-articles">
+                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laudantium accusamus fugiat possimus, doloremque officia, sunt explicabo aut nesciunt nisi quos amet! Odio exercitationem, veritatis nihil veniam amet repudiandae suscipit modi ipsum quae voluptatum mollitia totam assumenda numquam doloribus alias officia, dicta nemo sapiente vel. Maxime aspernatur minus accusamus eligendi voluptatum repellendus expedita laudantium praesentium blanditiis rem, veritatis, eum, enim id. Sapiente praesentium, nemo veritatis quaerat soluta distinctio saepe eos, dolores maxime ea consectetur delectus officiis. Earum veritatis quam officia assumenda aut pariatur cum debitis ab tempore autem, excepturi ducimus eius repellendus delectus? Aspernatur assumenda excepturi ut delectus illo enim soluta commodi rerum voluptates. Quisquam fuga doloribus perferendis quo illo illum sint architecto dolore voluptatibus, eaque magnam. Voluptates eos placeat, nihil repellat dignissimos vel doloribus in accusamus, ratione illo fugit provident aspernatur expedita culpa corporis, impedit officia pariatur voluptas dolor at ex itaque. Possimus necessitatibus deleniti sunt aut quae voluptas a nulla? Porro quod ipsa autem culpa sequi maiores quibusdam quo earum. Corrupti assumenda facere voluptate consectetur, blanditiis, recusandae repudiandae odit quaerat, non itaque numquam natus eos! Asperiores nisi, id iste impedit molestiae tempore sit aliquam dolor sapiente rem recusandae laudantium nostrum eum beatae rerum cupiditate qui mollitia nesciunt, quibusdam porro numquam quisquam? Perspiciatis explicabo aliquam, quibusdam dolore ad amet earum animi asperiores est consectetur suscipit beatae odit laboriosam distinctio sapiente possimus totam dolor, eos perferendis nam illo! Accusantium numquam nam dicta iusto reprehenderit, eum voluptatem nemo vero consequuntur vel voluptatibus optio distinctio odio! Molestias veritatis earum, officia labore soluta atque dolorem adipisci voluptatibus sed tempora fugiat accusantium harum consequuntur aliquam sint obcaecati maiores explicabo quibusdam perferendis! Aliquam porro dolore officiis beatae ex voluptate dolorem maiores exercitationem magnam quibusdam, consequatur asperiores hic quasi itaque expedita esse. Suscipit fuga excepturi ab quidem laborum, recusandae autem in eaque ad maiores cupiditate aperiam cum. Quaerat facere laudantium quo porro, corrupti fugiat illum nihil sint beatae quasi quos molestias hic nobis repellat sequi error consectetur labore illo consequatur eaque, nesciunt sapiente dolore. Accusantium eveniet sed, inventore cupiditate tempora officiis quasi voluptate necessitatibus, quidem error aliquid labore iure aperiam dolore aliquam explicabo assumenda quos, numquam at. Doloribus ratione animi nam, odio aut esse illum magnam placeat, sunt obcaecati, vero consequatur ipsum dicta qui repellat distinctio. Quam unde eligendi molestias facere, autem doloribus? A blanditiis eligendi corrupti accusantium atque iusto temporibus. Dignissimos vero quisquam excepturi doloribus corporis error voluptatem. Labore neque ducimus necessitatibus eveniet maxime autem, iste accusamus! Est fuga cupiditate, similique maiores aliquam aspernatur illo ipsam quaerat veritatis eius dolores ad, minus, totam voluptatum temporibus! Cum animi iste at, dolore dolor veritatis ratione esse amet vitae quam repudiandae velit nulla, similique quod aliquid deleniti laboriosam, ullam quas aliquam. Voluptates at aspernatur eaque quae molestias nisi cum, aperiam beatae facilis consectetur quia quam tenetur veritatis? Ducimus, sapiente corporis delectus architecto voluptates placeat. Quod pariatur, repudiandae earum eaque sed reiciendis tempore natus quas consequatur at aut quia vitae quasi cupiditate maxime ab ipsam ut illum temporibus? Quasi suscipit vitae ab adipisci! Aspernatur quos fuga, cumque aut, fugit nesciunt quia iste officia autem alias ratione error sequi. Placeat ipsa soluta delectus. Excepturi voluptatibus cupiditate enim eum fuga placeat animi, vero, repellendus sit dicta praesentium voluptates repudiandae laborum optio eveniet illum error asperiores vitae iste eius ad possimus. Placeat exercitationem at, atque officiis obcaecati accusamus optio qui error molestias eos deleniti enim molestiae laborum expedita doloribus commodi nostrum veniam eveniet odio cum, quae praesentium nihil maiores. Obcaecati eos odio maiores, unde nostrum, consequatur quae error tempore officia doloremque dolorem ipsam fugiat porro repellendus sed, laboriosam perspiciatis praesentium qui quisquam. Iusto, sint consequatur unde quaerat corrupti dolore nulla, aspernatur, enim eligendi suscipit labore quia. Iusto, id doloremque voluptatem est dolorem culpa vero cumque, reiciendis magnam praesentium sequi voluptas minus quos consequatur. Voluptates odit itaque dignissimos suscipit, ad aperiam facere tenetur temporibus porro iste vitae voluptatibus maxime, eius velit repellendus consectetur. Dignissimos blanditiis accusamus laboriosam ad nihil illum optio! Eum inventore repellat atque repudiandae, aliquam, est, beatae ducimus suscipit ipsa consequuntur quisquam! Ad reprehenderit molestias, inventore dicta repudiandae omnis quaerat officiis culpa quos enim aliquam id laboriosam nisi magnam consectetur neque vel porro a repellendus sit voluptatibus! Repellendus id explicabo, ullam magnam perferendis cum quos vitae voluptate temporibus soluta recusandae molestiae consectetur officia amet? Consequatur commodi omnis ea cupiditate atque totam voluptates vel eligendi asperiores, voluptatibus deserunt consectetur doloremque aut quasi quidem voluptatem error accusamus temporibus modi corrupti adipisci. Pariatur maiores, harum debitis necessitatibus provident repudiandae deleniti magnam. Molestias, aliquam sequi omnis amet quidem nisi quod? Incidunt, dolorum facere. Debitis expedita recusandae voluptatem doloremque voluptatum fugit dicta adipisci laboriosam, repellat voluptas inventore atque quos commodi quis ullam earum tempore sint. Voluptates quo ut dolore incidunt magni, veniam nemo rerum, voluptatibus inventore itaque, omnis alias perspiciatis. Totam tempora quae impedit vitae aspernatur quas ut quasi suscipit quaerat assumenda ipsa quo aut, fugit quibusdam? Distinctio repellat dicta dolore sequi at quis hic culpa exercitationem, harum saepe quae soluta eligendi dolores dolor nam! Hic nobis debitis odio voluptatem, excepturi ducimus voluptas consequuntur dolores ipsam fuga quam est suscipit corrupti doloremque totam beatae quia doloribus cum illum quasi! Ut doloribus inventore nihil pariatur optio excepturi, ab maiores minima eius fugit, a nostrum eos iste fugiat. Aut eveniet vero debitis numquam maiores iure necessitatibus, minima aliquam ut autem ducimus a laudantium cumque architecto nisi, labore voluptates minus corporis sequi nihil repellat tenetur nobis vel ipsa? Dolorem quasi in libero quos, non id exercitationem eaque. Ipsam tenetur optio molestiae exercitationem ut, reiciendis numquam sit eveniet magnam, quae similique, neque ab quidem. Velit quo nisi, amet minima rerum ratione magnam earum mollitia illum et distinctio possimus atque optio deleniti, dolorum recusandae accusamus modi. Earum eaque consequatur doloremque quia voluptate? Suscipit, minima enim. Cupiditate, inventore reprehenderit ipsum cumque veritatis amet, nostrum exercitationem quis iure optio totam tempora pariatur quaerat. Molestiae ipsa eius dolor, recusandae quia nam laudantium autem excepturi, maxime corrupti aut. Veniam esse repellendus unde reiciendis animi! Sunt placeat rerum, repudiandae expedita quas ab velit accusamus. Omnis libero est mollitia commodi minus. Doloribus nulla sed animi quibusdam accusamus.
+
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  </div>
+ <hr>
+  <!--Read latest issue-->
+  <div class="container">
+<div  class="bottomhover">
+<button class="om" style="margin-right: 1%;" ><img src="arrow.png" width="50%" ></button><a href="#"  style="text-decoration: none;color: black;">Read latest issue</a>
+</div>
+</div>
+
+<!--More from Expert Systems with Applications-->
+
+
+
+<div class="container">
+                
+  <section class="article-zone" id="article-zone" data-aa-region="aa-article-zone">
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-12">
+                <div class="u-margin-l-ver">
+                    <div class="section-heading-wrapper u-margin-l-ver">
+                        <h2 class="section-heading u-h3 js-article-zone-heading"
+                            style="--border-color: #055777;">More from Expert Systems with Applications</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#news" data-toggle="tab">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Announcement" data-toggle="tab">Announcements</a>
+                    </li>
+                   
+                </ul>
+                
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="news" >
+                      <div style="display: flex;margin-top: 2%; margin-bottom: 2%;">
+                       <div style="padding-left: 2%;">
+                        <p>20 November 2023</p>
+                        <a href="#"  style="text-decoration: none; color: black;"><strong> for submitting proposals for journal Special Issues</strong></a>
+                       </div>
+                       <div style="border-left: 1px solid gray;margin-left: 15%; padding-left: 2%;">
+                         <p>31 March 2016</p>
+                         <a href="#" style="text-decoration: none; color: black;"><strong>Expert Systems With Applications is currently ranked no.1 in the Google Scholar</strong></a>
+                       </div>
+                      </div>
+                    </div>
+                    
+
+
+
+
+                    <div class="tab-pane" id="Announcement">
+                      <div style="display: flex;margin-top: 2%; margin-bottom: 2%;">
+                        <div style="padding-left: 2%;">
+                         <p>20 November 2023</p>
+                         <a href="#"  style="text-decoration: none; color: black;"><strong> for submitting proposals for journal Special Issues</strong></a>
+                        </div>
+                        <div style="border-left: 1px solid gray;margin-left: 15%; padding-left: 2%;">
+                          <p>31 March 2016</p>
+                          <a href="#" style="text-decoration: none; color: black;"><strong>Expert Systems With Applications is currently ranked no.1 in the Google Scholar</strong></a>
+                        </div>
+                        <div style="border-left: 1px solid gray;margin-left: 15%; padding-left: 2%;">
+                          <p>31 March 2016</p>
+                          <a href="#" style="text-decoration: none; color: black;"><strong>Expert Systems With Applications is currently ranked no.1 in the Google Scholar</strong></a>
+                        </div>
+                       </div>
+                      
+                    </div>
+                        
+                    </div>
+                    <hr>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+
+<!--View all News-->
+
+<div class="container">
+  <div  class="bottomhover">
+  <button class="om" style="margin-right: 1%;" ><img src="arrow.png" width="50%" ></button><a href="#"  style="text-decoration: none;color: black;">View all news
+  </a>
+  </div>
+  </div>
+
+<!--Image Banner-->
+
+<div class="container" style="border: 1px solid gray;height: 40%;margin-top: 2%;">
+  <div style="display: flex;">
+    <div style="margin-left: 10%;">
+        <img src="search1.png" >
+    </div>
+    <div style="margin-left: 8%; margin-right: 8%;padding-top: 6%;">
+      <h6>More opportunities to publish your research:</h6>
+      <h4 class="bottomhover1"><a href="#" style="text-decoration: none;color: #114E5E;">Browse open Calls for Papersbeta</a></h4>
+    </div>
+    <div  style="margin-right: 10%; width: 20%;">
+       <img src="search2.png">
+    </div>
+  </div>
+</div>
+
+
+<!--Cards in page-->
+
+
+
+<div class="container-fluid" style="background-color: rgb(221, 221, 221); height: 40%;margin-top: 2%;">
+
+
+  <h4 style="margin-left: 6%; padding-top: 3%; padding-bottom: 2%;">Special issues and article collections</h4>
+  <div class="container">
+  <div class="row row-cols-1 row-cols-md-2">
+    <div class="col-md-3 mb-3">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ </div>
+ 
+  <div style="display: flex;" >
+ <div class="container" style="margin-left: 4.5%;margin-top: 2%;margin-bottom: 2%;">
+  <div  class="bottomhover">
+  <button class="om" style="margin-right: 1%;" ><img src="arrow.png" width="50%" ></button><a href="#"  style="text-decoration: none;color: black;font-size: 20px;">View all special issues and article collections
+  </a>
+  </div>
+  </div>
+  
+ <div class="container" style="margin-top: 2%; margin-bottom:2% ;">
+  <div  class="bottomhover">
+  <button class="om" style="margin-right: 1%;" ><img src="arrow.png" width="50%" ></button><a href="#"  style="text-decoration: none;color: black;font-size: 20px;">View all issues
+  </a>
+  </div>
+  </div>
+ </div>
+</div>
+
+<!--Partner journals-->
+<h4 style="margin-top: 2%;margin-left: 7%; margin-bottom: 2%;">Partner journals</h4>
+<div class="container">
+    <div class="row">
+      <div class="col-md-5 " style="background-color: rgb(221, 221, 221) ;box-shadow: 10px black;">
+        <div style="display: flex;">
+          <div ><a href="#"> <img src="ml.jpg" width="90%" ></a></div>
+         <div class="bottomhover">
+            <h6 style="margin-top: 20%;"><a  href="# " style="text-decoration: none; color: black;"><strong>Machine Learning with Applications</strong></a></h6>
+            <p>Open access
+            </p>
+         </div>
+        </div>
+      </div>
+      <div class="col-md-7">
+         <p style="margin-left: 5%;">Machine Learning with Applications (MLWA) is a peer reviewed, open access journal focused on research related to machine learning. The journal encompasses all aspects of research and development in ML, including but not limited to data mining, computer vision, natural language processing (NLP), …</p>
+         <div class="bottomhover1" style="margin-left: 5%;margin-top: 10%;"><a href="# " style="text-decoration: none; ">View full aims & scope</a></div>
+        </div>
+    </div>
+   
+</div>
+    </main>
+
+
+    <!--This is Footer Section-->
+    <footer>
+        <!--1st footer-->
+
+        <div class="container-fluid" style="background-color: rgb(221, 221, 221) ;height: 50%;margin-top: 3%; ">
+              <div class="container">
+                  <div class="row" style="padding-top: 10%; padding-bottom: 7%;">
+                    <div class="col-md-2" >
+                         <span>Online ISSN: 1873-6793</span><br>
+                         <span>Print ISSN: 0957-4174</span>
+                    </div>
+                    <div class="col-md-10" style="padding-left: 3%;border-left: 1px solid gray ;">
+                      <span>Copyright © 2024 Elsevier Ltd. All</span><br>
+                      <span>rights reserved</span>
+                    </div>
+
+                  </div>
+              </div>
+        
+
+
+        <!--Card in footer-->
+
+        <div class="container">
+  <div class="row row-cols-1 row-cols-md-2">
+    <div class="col-md-4 mb-3">
+      <div class="card" style="background-color: transparent;border: none;">
+        <h6 style="border-bottom:1px solid black; padding-bottom: 10px;">For authors</h6> 
+        <div class="card-body">
+          <div class="bottomhover1" style="padding-bottom: 3%;"> <a href="#" style="text-decoration: none; ;">Resources for authors&nbsp;<img  src="arrowup.png" width="5%"></a></div>
+          <div class="bottomhover1" style="padding-bottom: 3%;"> <a href="#" style="text-decoration: none;">Track your accepted paper&nbsp;<img src="arrowup.png" width="5%"></a></div>
+          <div class="bottomhover1"style="padding-bottom: 3%;"> <a href="#" style="text-decoration: none;">Journal Finder&nbsp;<img src="arrowup.png" width="5%"></a></div>
+          <div class="bottomhover1" style="padding-bottom: 3%;"> <a href="#" style="text-decoration: none;">Researcher Academy&nbsp;<img src="arrowup.png" width="5%"></a></div>
+          <div class="bottomhover1" style="padding-bottom: 3%;"> <a href="#" style="text-decoration: none;">Rights and permissions&nbsp;<img src="arrowup.png" width="5%"></a></div>
+          <div class="bottomhover1" style="padding-bottom: 3%;"> <a href="#" style="text-decoration: none;">Journal Article Publishing Support Center&nbsp;<img src="arrowup.png" width="5%"></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card" style="background-color: transparent;border: none;">
+        <h6 style="border-bottom:1px solid black; padding-bottom: 10px;">For editors</h6>
+        
+        <div class="card-body">
+          <div class="bottomhover1" style="padding-bottom: 3%;"> <a href="#" style="text-decoration: none;">Resources for editors&nbsp;<img src="arrowup.png" width="5%"></a></div>
+          <div class="bottomhover1" style="padding-bottom: 3%;"> <a href="#" style="text-decoration: none;">Publishing Ethics Resource Kit&nbsp;<img src="arrowup.png" width="5%"></a></div>
+          <div class="bottomhover1"style="padding-bottom: 3%;"> <a href="#" style="text-decoration: none;">Guest editors&nbsp;<img src="arrowup.png" width="5%"></a></div>
+         </div>
+      </div>
+    </div>
+
+    
+
+    <div class="col-md-4 mb-3">
+      <div class="card" style="background-color: transparent;border: none;">
+        <h6 style="border-bottom:1px solid black; padding-bottom: 10px;">For reviewers</h6>
+        <div class="card-body">
+          <div class="bottomhover1" style="padding-bottom: 3%;"> <a href="#" style="text-decoration: none;">Resources for reviewers&nbsp;<img src="arrowup.png" width="5%"></a></div>
+          <div class="bottomhover1" style="padding-bottom: 3%;"> <a href="#" style="text-decoration: none;">Reviewer recognition&nbsp;<img src="arrowup.png" width="5%"></a></div>
+          </div>
+      </div>
+    </div>
+   
+  </div>
+
+ </div>
+</div>
+</footer>
+<footer>
+
+<!--2nd Footer-->
+
+<div class="container-fluid" style="border-top: 2px solid orange;height: 30%;">
+   <div style="display: flex; margin-top: 2%; margin-bottom: 2%;">
+      <div style="width: 10%;">
+          <img src="sknscoeicon.jpg" width="60%">
+      </div>
+      <div style="width: 80%;">
+
+        <ul style="list-style-type: none; "  >
+          <li  style="font-size: 13px;" class="bottomhover" >
+            <a  aria-current="page" href="#" style="text-decoration: none; color: black;"><span>About ScienceDirect &nbsp;<img src="arrowup.png" width="10%"></span></a>
+          </li>
+          <li  style="font-size: 13px;" class="bottomhover" >
+            <a  aria-current="page" href="#" style="text-decoration: none; color: black;"><span>Remote access</span></a>
+          </li>
+          <li  style="font-size: 13px;" class="bottomhover">
+            <a  aria-current="page" href="#" style="text-decoration: none; color: black;"><span>Shopping cart &nbsp;<img src="arrowup.png" width="13%"></span></a>
+          </li>
+          <li style="font-size: 13px;" class="bottomhover">
+            <a aria-current="page" href="#" style="text-decoration: none; color: black;"><span>Advertise &nbsp;<img src="arrowup.png" width="13%"></span></a>
+          </li>
+          <li  style="font-size: 13px;" class="bottomhover">
+            <a  aria-current="page" href="#" style="text-decoration: none; color: black;"><span>Contact and support &nbsp;<img src="arrowup.png" width="10%"></span></a>
+          </li>
+          <li style="font-size: 13px;" class="bottomhover">
+            <a  aria-current="page" href="#" style="text-decoration: none; color: black;"><span>Terms and conditions &nbsp;<img src="arrowup.png" width="10%"></span></a>
+          </li>
+          <li  style="font-size: 13px;" class="bottomhover">
+            <a aria-current="page" href="#" style="text-decoration: none; color: black;"><span>Privacy policy &nbsp;<img src="arrowup.png" width="13%"></span></a>
+          </li>
+        </ul>
+      
+           
+        <span style="font-size: 13px;">Cookies are used by this site.<strong> Cookie Settings</strong></span><br>
+        <span style="font-size: 13px;">All content on this site: Copyright © 2024 Elsevier B.V., its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the Creative Commons licensing terms apply.</span>
+      </div>
+      <div style="width: 10%;">
+        <img src="sknscoeicon.jpg" width="60%" >
+      </div>
+   </div>
+</div>
+    </footer>
+</body>
+</html>
